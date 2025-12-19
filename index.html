@@ -9,13 +9,17 @@
 <body>
 		<canvas id="canvas-main" style="background-color: #fafafa;" width="300" height="300"></canvas>
     <script type="text/javascript">
-        // Invoke the main function once the document is loaded
+			TheMain.main(document);
+		  	/*document.addEventListener('keydown', function(event) {
+		  		const keyPressed = event.key;
+		  		EventHandler.nmain(keyPressed); 
+		  	});
         document.addEventListener("DOMContentLoaded", function() {
             const pre = document.getElementById("mouse-info");
             const c = document.getElementById("canvas-main" );
             EventHandler.main(c,c);
             TheCanvas.main(c);
-        });
+        });*/
     </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-let TheCanvas,EventHandler,TheAlert;
+let TheMain,TheCanvas,EventHandler,TheAlert;
 (function(){
 'use strict';
 var $fileLevelThis = this;
@@ -945,7 +945,7 @@ $c_Lfrwsth_Canvas$.prototype.submain__Lorg_scalajs_dom_HTMLCanvasElement__V = (f
   var ctx = c.getContext("2d");
   c.width = 300;
   c.height = 300;
-  ctx.strokeStyle = "blue";
+  ctx.strokeStyle = "green";
   ctx.lineWidth = 3.0;
   ctx.beginPath();
   ctx.moveTo(150.0, 0.0);
@@ -1001,6 +1001,11 @@ $c_Lfrwsth_EventHandler$.prototype.main__Lorg_scalajs_dom_HTMLPreElement__Lorg_s
     $m_Lfrwsth_Canvas$().submain__Lorg_scalajs_dom_HTMLCanvasElement__V(c);
   });
 });
+$c_Lfrwsth_EventHandler$.prototype.nmain = (function(arg) {
+  var this$2 = $m_s_Console$();
+  var this$3 = $n(this$2.out__Ljava_io_PrintStream());
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((arg + "\n"));
+});
 $c_Lfrwsth_EventHandler$.prototype.main = (function(arg, arg$2) {
   this.main__Lorg_scalajs_dom_HTMLPreElement__Lorg_scalajs_dom_HTMLCanvasElement__V(arg, arg$2);
 });
@@ -1014,11 +1019,45 @@ function $m_Lfrwsth_EventHandler$() {
   }
   return $n_Lfrwsth_EventHandler$;
 }
+/** @constructor */
+function $c_Lfrwsth_TheMain$() {
+}
+$c_Lfrwsth_TheMain$.prototype = new $h_O();
+$c_Lfrwsth_TheMain$.prototype.constructor = $c_Lfrwsth_TheMain$;
+/** @constructor */
+function $h_Lfrwsth_TheMain$() {
+}
+$h_Lfrwsth_TheMain$.prototype = $c_Lfrwsth_TheMain$.prototype;
+$c_Lfrwsth_TheMain$.prototype.parseInput__Lorg_scalajs_dom_Event__V = (function(event) {
+  var c = document.getElementById("canvas-main");
+  $m_Lfrwsth_Canvas$().main__Lorg_scalajs_dom_HTMLCanvasElement__V(c);
+});
+$c_Lfrwsth_TheMain$.prototype.main__Lorg_scalajs_dom_HTMLDocument__V = (function(document) {
+  var this$2 = $m_s_Console$();
+  var this$3 = $n(this$2.out__Ljava_io_PrintStream());
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((document + "\n"));
+  document.addEventListener("keydown", ((event) => {
+    $m_Lfrwsth_TheMain$().parseInput__Lorg_scalajs_dom_Event__V(event);
+  }));
+});
+$c_Lfrwsth_TheMain$.prototype.main = (function(arg) {
+  this.main__Lorg_scalajs_dom_HTMLDocument__V(arg);
+});
+var $d_Lfrwsth_TheMain$ = new $TypeData().initClass($c_Lfrwsth_TheMain$, "frwsth.TheMain$", ({
+  Lfrwsth_TheMain$: 1
+}));
+var $n_Lfrwsth_TheMain$;
+function $m_Lfrwsth_TheMain$() {
+  if ((!$n_Lfrwsth_TheMain$)) {
+    $n_Lfrwsth_TheMain$ = new $c_Lfrwsth_TheMain$();
+  }
+  return $n_Lfrwsth_TheMain$;
+}
 function $s_Lfrwsth_hello__main__AT__V(args) {
   try {
     var this$3 = $m_s_Console$();
     var this$4 = $n(this$3.out__Ljava_io_PrintStream());
-    this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V("Hello world!\n");
+    this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V("Game is compiled!\n");
   } catch (e) {
     if (false) {
       var error = $as_s_util_CommandLineParser$ParseError(e);
@@ -2134,6 +2173,7 @@ var $d_jl_JSConsoleBasedPrintStream = new $TypeData().initClass($c_jl_JSConsoleB
 }));
 $L0 = new $c_RTLong(0, 0);
 $d_J.zero = $L0;
+TheMain = $m_Lfrwsth_TheMain$();
 TheCanvas = $m_Lfrwsth_Canvas$();
 EventHandler = $m_Lfrwsth_EventHandler$();
 TheAlert = $m_Lfrwsth_Alert$();

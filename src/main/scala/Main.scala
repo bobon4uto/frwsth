@@ -6,8 +6,35 @@ import scala.scalajs.js.annotation._
 import org.scalajs.dom._
 import org.scalajs.dom
 @main def hello(): Unit =
-  println("Hello world!")
-def msg = "I was compiled by Scala 3. :)"
+  println("Game is compiled!")
+
+@JSExportTopLevel("TheMain")
+object TheMain{
+def parseInput (event:dom.Event) = {
+    val c = document.getElementById("canvas-main").asInstanceOf[html.Canvas];
+
+    Canvas.main(c);
+  }
+  @JSExport
+def main(document:dom.HTMLDocument):Unit = {
+  println(document)
+  document.addEventListener("keydown", parseInput)
+}
+
+
+
+
+	/*document.addEventListener('keydown', function(event) {
+		  		const keyPressed = event.key;
+		  		EventHandler.nmain(keyPressed); 
+		  	});
+        document.addEventListener("DOMContentLoaded", function() {
+            const pre = document.getElementById("mouse-info");
+            const c = document.getElementById("canvas-main" );
+            EventHandler.main(c,c);
+            TheCanvas.main(c);
+        });*/
+}
 @JSExportTopLevel("EventHandler")
 object EventHandler{
   @JSExport
@@ -16,6 +43,9 @@ def main(pre: html.Pre, c: html.Canvas ) :Unit  =
     (e: dom.MouseEvent) =>
          Canvas.submain(c)
   }
+  @JSExport
+def nmain(e: dom.Event) :Unit  = 
+  println(e);
 }
 @JSExportTopLevel("TheCanvas")
 object Canvas {
@@ -29,7 +59,7 @@ object Canvas {
     c.width = w
     c.height = w
 
-    ctx.strokeStyle = "blue"
+    ctx.strokeStyle = "green"
     ctx.lineWidth = 3
     ctx.beginPath()
     ctx.moveTo(w/2, 0)
