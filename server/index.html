@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Example</title>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+		<canvas id="canvas-main" style="background-color: #fafafa;" width="300" height="300"></canvas>
+    <script type="text/javascript">
+        // Invoke the main function once the document is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            const pre = document.getElementById("mouse-info");
+            const c = document.getElementById("canvas-main" );
+            EventHandler.main(c,c);
+            TheCanvas.main(c);
+        });
+    </script>
+</body>
+</html>
+
