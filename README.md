@@ -1,9 +1,14 @@
-## sbt project compiled with Scala 3
+# frwsth
 
 ### Usage
 
-This is a normal sbt project. You can compile code with `sbt compile`, run it with `sbt run`, and `sbt console` will start a Scala 3 REPL.
-
-For more information on the sbt-dotty plugin, see the
-[scala3-example-project](https://github.com/scala/scala3-example-project/blob/main/README.md).
-# frwsth
+to compile run ./b,  
+or manually run 'sbt run' and copy resulting  
+./target/scala-3.7.4/frwsth-fastopt/main.js and main.js.map 
+(they are in the same folder)
+to ./server, inside ./server run some http server  
+(e.g. python -m http.server if not installed  
+install with python -m pip install http  
+usually it comes bundled with python though)
+and you can view the game in the browser afterwards  
+(default for python is 127.0.0.1:8000)
