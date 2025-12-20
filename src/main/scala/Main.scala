@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation._
 import org.scalajs.dom._
 import org.scalajs.dom
 @main def hello(): Unit =
+  val c = document.getElementById("canvas-main").asInstanceOf[html.Canvas];
+  Canvas.main(c);
   println("Game is compiled!")
 
 @JSExportTopLevel("TheMain")

@@ -1001,13 +1001,13 @@ $c_Lfrwsth_EventHandler$.prototype.main__Lorg_scalajs_dom_HTMLPreElement__Lorg_s
     $m_Lfrwsth_Canvas$().submain__Lorg_scalajs_dom_HTMLCanvasElement__V(c);
   });
 });
+$c_Lfrwsth_EventHandler$.prototype.main = (function(arg, arg$2) {
+  this.main__Lorg_scalajs_dom_HTMLPreElement__Lorg_scalajs_dom_HTMLCanvasElement__V(arg, arg$2);
+});
 $c_Lfrwsth_EventHandler$.prototype.nmain = (function(arg) {
   var this$2 = $m_s_Console$();
   var this$3 = $n(this$2.out__Ljava_io_PrintStream());
   this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((arg + "\n"));
-});
-$c_Lfrwsth_EventHandler$.prototype.main = (function(arg, arg$2) {
-  this.main__Lorg_scalajs_dom_HTMLPreElement__Lorg_scalajs_dom_HTMLCanvasElement__V(arg, arg$2);
 });
 var $d_Lfrwsth_EventHandler$ = new $TypeData().initClass($c_Lfrwsth_EventHandler$, "frwsth.EventHandler$", ({
   Lfrwsth_EventHandler$: 1
@@ -1018,6 +1018,32 @@ function $m_Lfrwsth_EventHandler$() {
     $n_Lfrwsth_EventHandler$ = new $c_Lfrwsth_EventHandler$();
   }
   return $n_Lfrwsth_EventHandler$;
+}
+/** @constructor */
+function $c_Lfrwsth_Main$package$() {
+}
+$c_Lfrwsth_Main$package$.prototype = new $h_O();
+$c_Lfrwsth_Main$package$.prototype.constructor = $c_Lfrwsth_Main$package$;
+/** @constructor */
+function $h_Lfrwsth_Main$package$() {
+}
+$h_Lfrwsth_Main$package$.prototype = $c_Lfrwsth_Main$package$.prototype;
+$c_Lfrwsth_Main$package$.prototype.hello__V = (function() {
+  var c = document.getElementById("canvas-main");
+  $m_Lfrwsth_Canvas$().main__Lorg_scalajs_dom_HTMLCanvasElement__V(c);
+  var this$2 = $m_s_Console$();
+  var this$3 = $n(this$2.out__Ljava_io_PrintStream());
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V("Game is compiled!\n");
+});
+var $d_Lfrwsth_Main$package$ = new $TypeData().initClass($c_Lfrwsth_Main$package$, "frwsth.Main$package$", ({
+  Lfrwsth_Main$package$: 1
+}));
+var $n_Lfrwsth_Main$package$;
+function $m_Lfrwsth_Main$package$() {
+  if ((!$n_Lfrwsth_Main$package$)) {
+    $n_Lfrwsth_Main$package$ = new $c_Lfrwsth_Main$package$();
+  }
+  return $n_Lfrwsth_Main$package$;
 }
 /** @constructor */
 function $c_Lfrwsth_TheMain$() {
@@ -1055,9 +1081,7 @@ function $m_Lfrwsth_TheMain$() {
 }
 function $s_Lfrwsth_hello__main__AT__V(args) {
   try {
-    var this$3 = $m_s_Console$();
-    var this$4 = $n(this$3.out__Ljava_io_PrintStream());
-    this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V("Game is compiled!\n");
+    $m_Lfrwsth_Main$package$().hello__V();
   } catch (e) {
     if (false) {
       var error = $as_s_util_CommandLineParser$ParseError(e);
